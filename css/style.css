@@ -1,0 +1,366 @@
+@import url(http://fonts.googleapis.com/css?family=Pontano+Sans);
+@keyframes warrior {
+  from {
+    color: #fdfdfd;
+    text-shadow: 0 0 9px #333;
+  }
+
+  50% {
+    color: #fcf0c2;
+    text-shadow: 0 0 18px #fcf0c2;
+  }
+
+  to {
+    color: #fdfdfd;
+    text-shadow: 0 0 9px #333;
+  }
+}
+@-webkit-keyframes warrior {
+  from {
+    color: #fdfdfd;
+    -webkit-text-shadow: 0 0 9px #333;
+  }
+
+  50% {
+    color: #fcf0c2;
+    -webkit-text-shadow: 0 0 18px #fcf0c2;
+  }
+
+  to {
+    color: #fdfdfd;
+    -webkit-text-shadow: 0 0 9px #333;
+  }
+}
+@-moz-keyframes warrior {
+  from {
+    color: #fdfdfd;
+    -moz-text-shadow: 0 0 9px #333;
+  }
+
+  50% {
+    color: #fcf0c2;
+    -moz-text-shadow: 0 0 18px #fcf0c2;
+  }
+
+  to {
+    color: #fdfdfd;
+    -moz-text-shadow: 0 0 9px #333;
+  }
+}
+@-ms-keyframes warrior {
+  from {
+    color: #fdfdfd;
+    -ms-text-shadow: 0 0 9px #333;
+  }
+
+  50% {
+    color: #fcf0c2;
+    -ms-text-shadow: 0 0 18px #fcf0c2;
+  }
+
+  to {
+    color: #fdfdfd;
+    -ms-text-shadow: 0 0 9px #333;
+  }
+}
+@-o-keyframes warrior {
+  from {
+    color: #fdfdfd;
+    -o-text-shadow: 0 0 9px #333;
+  }
+
+  50% {
+    color: #fcf0c2;
+    -o-text-shadow: 0 0 18px #fcf0c2;
+  }
+
+  to {
+    color: #fdfdfd;
+    -o-text-shadow: 0 0 9px #333;
+  }
+}
+body {
+  font-family: "Pontano Sans";
+  background-color: #0d0d0d;
+  color: #fdfdfd;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.user-logo {
+  max-width: 100%;
+  height: 47px;
+  float: left;
+  border-left: 3px solid #3e323f;
+}
+
+header {
+  background-color: #6441a5;
+  height: 50px;
+  border-bottom: 3px solid #3e323f;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+
+#warrior {
+  padding: 15px;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+}
+#warrior a {
+  animation-name: warrior;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: warrior;
+  -webkit-animation-duration: 7s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: warrior;
+  -moz-animation-duration: 7s;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-name: warrior;
+  -ms-animation-duration: 7s;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-name: warrior;
+  -o-animation-duration: 7s;
+  -o-animation-iteration-count: infinite;
+}
+
+nav ul {
+  list-style-type: none;
+  float: right;
+  margin: 0 -15px 0 0;
+}
+nav ul li {
+  float: left;
+}
+nav ul li:hover form, nav ul li:hover ul, nav ul li:hover span {
+  display: block;
+}
+nav ul li a {
+  padding: 10px 10px 12px 10px;
+  display: block;
+  color: #fdfdfd;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -ms-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+nav ul li a:hover {
+  background-color: #fcf0c2;
+  color: #3e323f;
+}
+nav ul li ul {
+  position: absolute;
+  display: none;
+  background-color: #3e323f;
+  padding: 3px;
+  margin: 0;
+  z-index: 10;
+}
+nav ul li ul li {
+  list-style-type: none;
+  float: none;
+  color: #fdfdfd;
+  font-size: 0.8em;
+}
+nav ul li span {
+  position: absolute;
+  display: none;
+  padding: 10px;
+  background-color: #3e323f;
+  top: 50px;
+  width: 100%;
+}
+nav ul li form {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background-color: #3e323f;
+  z-index: 10;
+}
+nav ul li form input {
+  width: 100%;
+  border: none;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  font-family: "Pontano Sans";
+  margin-bottom: 5px;
+}
+nav ul li form button {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fcf0c2;
+  color: #3e323f;
+  font-size: 1em;
+  font-family: "Pontano Sans";
+}
+nav ul li form button:hover {
+  background-color: #6441a5;
+  color: #fcf0c2;
+}
+nav #remove-stream li, nav #change-chat li, nav #following li, nav #events li {
+  cursor: pointer;
+  padding: 3px;
+  border-left: 3px solid #3e323f;
+}
+nav #remove-stream li:hover, nav #change-chat li:hover, nav #following li:hover, nav #events li:hover {
+  color: #fcf0c2;
+  border-left: 3px solid #fcf0c2;
+}
+nav #user a {
+  float: left;
+}
+nav #logout {
+  cursor: pointer;
+  color: #fdfdfd;
+  margin-top: -3px;
+}
+nav #logout:hover {
+  background-color: #fcf0c2;
+  color: #0d0d0d;
+}
+
+.message {
+  position: fixed;
+  display: none;
+  text-align: center;
+  top: 0;
+  padding: 15% 15%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.message h1 {
+  text-align: center;
+  color: #6441a5;
+}
+
+main {
+  margin-top: 65px;
+  text-align: center;
+}
+main i {
+  display: inline-block;
+  color: #fcf0c2;
+}
+main i:hover {
+  color: #fdfdfd;
+}
+main h3 {
+  color: #6441a5;
+}
+main h3:hover {
+  color: #fdfdfd;
+}
+main i, main h3 {
+  -webkit-transition: color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
+}
+
+.stream-wrapper .stream-intro h1 {
+  font-weight: bold;
+  font-family: "Pontano Sans";
+  color: #6441a5;
+  text-transform: lowercase;
+  border-bottom: 3px solid #6441a5;
+  margin-bottom: 25px;
+}
+.stream-wrapper .stream-intro hr {
+  border-width: 3px 0 0;
+  border-color: #6441a5;
+}
+.stream-wrapper .stream-video {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.updates, .tips {
+  text-align: left;
+}
+.updates h4, .tips h4 {
+  color: #6441a5;
+}
+.updates ul, .tips ul {
+  padding: 0;
+}
+.updates ul li, .tips ul li {
+  font-size: 0.8em;
+}
+
+.chat-wrapper {
+  position: fixed;
+  z-index: 9;
+  top: 65px;
+  right: 0;
+  background-color: #1e1e1e !important;
+  height: 100%;
+}
+.chat-wrapper .chat-intro {
+  position: relative;
+  top: 40%;
+}
+.chat-wrapper .chat-intro h4 {
+  color: #fdfdfd;
+  margin: 0;
+}
+.chat-wrapper .chat-intro a {
+  color: #6441a5;
+  -webkit-transition: color .15s ease-in-out;
+  -moz-transition: color .15s ease-in-out;
+  -ms-transition: color .15s ease-in-out;
+  -o-transition: color .15s ease-in-out;
+  transition: color .15s ease-in-out;
+}
+.chat-wrapper .chat-intro a:hover {
+  color: #fcf0c2;
+}
+.chat-wrapper .current-chat {
+  text-align: center;
+  background-color: #3e323f;
+  margin: 0 -15px;
+}
+.chat-wrapper .current-chat h5 {
+  color: #fdfdfd;
+  background-color: #3e323f;
+  font-family: "Pontano Sans";
+  font-size: 0.7em;
+  padding: 5px 0;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 30%;
+}
+.chat-wrapper .current-chat span {
+  display: block;
+  float: left;
+  width: 70%;
+  background-color: #6441a5;
+  padding: 7px 0;
+  font-size: 0.7em;
+  margin: 0;
+}
+.chat-wrapper .chat {
+  height: 100%;
+  width: 100%;
+  margin-right: -15px;
+  padding-bottom: 127%;
+  overflow: hidden;
+  position: relative;
+}
+.chat-wrapper .chat iframe {
+  width: 100%;
+  height: 81%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
