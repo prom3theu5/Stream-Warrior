@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>stream warrior</title>
+
+	<!-- FontAwesome -->
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+	<!-- Foundation -->
+	<link rel="stylesheet" href="css/foundation.min.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<header>
+		<div id="warrior" class="medium-2 columns">
+			<a href="/stream-warrior/">Stream Warrior</a>
+		</div>
+		<div class="medium-10 columns">
+			<nav>
+				<ul>
+					<li id="add-stream">
+						<a href="#">Add Stream</a>
+						<form onsubmit="return false">
+							<input type="text" placeholder="Enter a stream">
+							<button type="submit">Add Stream</button>
+						</form>
+					</li>
+					<li id="change-chat" class="hidden">
+						<a href="#">Change Chat</a>
+						<ul></ul>
+					</li>
+					<li id="remove-stream" class="hidden">
+						<a href="#">Remove Stream</a>
+						<ul></ul>
+					</li>
+					<li id="following"  class="authenticated hidden">
+						<a href="#">Following</a>
+						<ul></ul>
+					</li>
+					<!-- <li id="events">
+						<a href="#">Events</a>
+						<ul>
+							<li>Still working out the kinks. :(</li>
+							<li>Next Level: Battle Circuit</li>
+							<li>The House Of Crack</li>
+							<li>Wednesday Night Fights</li>
+							<li>The Runback</li>
+						</ul>
+					</li> -->
+					<li>
+						<a href="#">Settings</a>
+						<ul>
+							<li id="hide-chat" class="hidden">
+								<a href="#">Hide Chat</a>
+							</li>
+							<li id="reveal-chat" class="hidden">
+								<a href="#">Reveal Chat</a>
+							</li>
+							<li id="set-grid" class="hidden">
+								<a href="#">Grid View</a>
+							</li>
+							<li id="set-list" class="hidden">
+								<a href="#">List View</a>
+							</li>
+						</ul>
+					</li>
+					<li id="user" class="authenticated hidden">
+						<div>
+							<a href="#"></a>
+						</div>
+						<span id="logout">Log Out</span>
+					</li>
+					<li class="not-authenticated hidden">
+						<a href="#" class="twitch-connect">Log In</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+
+
+
+	<!-- main -->
+	<main>
+		<!-- stream -->
+		<div class="stream-wrapper medium-8 columns">
+			<div class="stream-intro">
+
+				<h1>Stream Warrior</h1>
+
+				<div class="row">
+					<div class="medium-4 columns">
+						<a class="twitch-connect" href="#">
+							<i class="fa fa-link fa-5x"></i>
+							<h3>Log in.</h3>
+						</a>
+						<p>Or don't. You won't able to see streams that you follow with your Twitch account, but that's up to you.</p>
+					</div>
+
+					<div class="medium-4 columns">
+						<i class="fa fa-th fa-5x"></i>
+						<h3>Pick a stream.</h3>
+						<p>You can either pick one from <span style="text-decoration:line-through">a preset event</span>, your "following" list, or type in the broadcaster's name. Check out the top right of the page for these options.</p>
+					</div>
+
+					<div class="medium-4 columns">
+						<i class="fa fa-video-camera fa-5x"></i>
+						<h3>Watch endlessly.</h3>
+						<p>Become the ultimate stream warrior...? Go watch every stream until your computer explodes.</p>
+					</div>
+				</div>
+
+				<hr>
+
+				<div class="row">
+					<div class="medium-8 columns updates">
+						<h4>Updates</h4>
+						<ul>
+							April 2nd, 2014
+							<li>Now on <a href="#">Github</a></li>
+							<li>Added basic grid view (under "settings" option)</li>
+							<li>Can now toggle between chat and no chat (under "settings" option)</li>
+							<li>Streams no longer auto-play when added</li>
+							<li>"Log out" hover issue fixed</li>
+							<li>Clicking the stream no longer redirects you to the Twitch page of that stream</li>
+							<li>Smaller font for "Following" list to allow more streams</li>
+						</ul>
+						<ul>
+							March 22nd, 2014
+							<li>Launch</li>
+						</ul>
+					</div>
+					<div class="medium-4 columns tips">
+						<h4>Tips</h4>
+						<ul>
+							<li>Want to chat with one stream, but watch another? Just use the "Change Chat" option and scroll to the other stream.</li>
+							<li>The "Following" list can only load a maximum of 25 streams. Twitch's rules, not mine!</li>
+							<li>The number of streams that you can add is up to you, but be mindful of your computer's stress.</li>
+							<li>You can log out of the app by hovering over your name and clicking "Log Out".</li>
+						</ul>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+
+		<!-- chat -->
+		<div class="chat-wrapper medium-4 columns">
+			<div class="chat-intro row">
+				<h4>Got feedback?</h4>
+				<span>Send me a message on <a href="http://twitter.com/aundre_kerr">twitter</a> or <a href="mailto:hello@aundrekerr.com">email</a>.</span>
+			</div>
+			<div class="current-chat hidden">
+				<h5>Current Chat</h5>
+				<span></span>
+			</div>
+		</div>
+	</main>
+
+	<div class="message medium-8">
+		<h1></h1>
+	</div>
+
+	
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- Twitch JS SDK -->
+<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+
+<!-- FitVids -->
+<script src="js/min/jquery.fitvids.min.js"></script>
+
+<!-- Scripts -->
+<script src="js/min/script.min.js"></script>
+</body>
+</html>
